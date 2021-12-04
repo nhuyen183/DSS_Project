@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Compute BMR</h1>
+    <br />
+    <form action="/" method="POST">
+      Weight (Kg)
+      <input type="text" name="weight" /><br />
+      Height (cm)
+      <input type="text" name="height" /><br />
+      Age (Kg)
+      <input type="text" name="age" /><br />
+      Gender (male/female)
+      <input type="text" name="gender" /><br />
+      <!-- <button type="submit" value="submit">CalculateBMR</button> -->
+      <h1>Calculate Your BodyFat</h1>
+      Waist (cm)
+      <input type="text" name="waist" /><br />
+
+      Neck (cm)
+      <input type="text" name="neck" /><br />
+
+      Hip (cm)
+      <input type="text" name="hip" /><br />
+
+      <h1>Your pro per day</h1>
+      <!---->
+      Status
+      <input type="text" name="status" /><br />
+
+      <h1>Your Fat per day</h1>
+
+      <button type="submit" value="submit">Calculate</button>
+    </form>
+    {%if bmr%}
+    <p>Wow !!! Your bmr is <strong>{{bmr}}</strong></p>
+    {%endif%} {%if bodyFat%}
+    <p>Wow !!! Your bodyFat is <strong>{{bodyFat}}</strong></p>
+    {%endif%} {%if Protein_per_day%}
+    <p>Wow !!! Your ProteinPerDay is <strong>{{Protein_per_day}}</strong></p>
+    {%endif%} {%if Fat_per_day%}
+    <p>Wow !!! Your FatPerDay is <strong>{{Fat_per_day}}</strong></p>
+    {%endif%}
+  </body>
+</html>
